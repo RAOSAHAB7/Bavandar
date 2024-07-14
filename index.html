@@ -69,7 +69,7 @@
 <body>
     <div class="container">
         <h1>Click on Pay NOW</h1>
-        <img src="https://github.com/RAOSAHAB7/Bavandar/blob/main/path-to-your-upi-qr-code.png?raw=true" alt="UPI QR Code"> <!-- Replace with the correct GitHub raw URL of your UPI QR code image -->
+        <img id="qrCodeImg" src="data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QA6RXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABPKADAAQAAAABAAABkAAAAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAoACgDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAIhEAAgICAwEBAAAAAAAAAAAAAAERAgMhMUEEQWETI//aAAwDAQACEQMRAD8AaSR90+kVqto0JyCP9oornOjCgA61wCqBqVDH61AKqZpmoxSgAooqtSjoiopNIMKaKMUqWiijSow2gFQ0rFGoU5YoFMc6CnUmlTmKUBQR1oKm8FVqsBqrVqLJ1QxaSjTUi8+NVqNB5xSZWiz60uqOgA60yKMVHQUoGn6USigVHSioA0zVI4tNGrUdqTJJQlFFKY6CmKMTSjNGkooy2gNFGoUrFiUg0yKMUqOigdRmgxSjRnFIz/9k=" alt="UPI QR Code"> <!-- Replace with your base64 encoded image -->
         <p>अपना भुगतान करने के लिए पेमेंट ऐप्प चुनें:</p>
         <button class="btn-pay" onclick="payNow()">Pay now</button>
         <button class="btn-download" onclick="downloadQR()">Download QR</button>
@@ -80,7 +80,7 @@
 
     <script>
         function payNow() {
-            const upiId = 'Bavandarpandey@oksbi'; // Replace with your UPI ID
+            const upiId = 'BHARATPE.8T0N0G4D4o50478@fbpe'; // Replace with your UPI ID
             const amount = ''; // Replace with your transaction amount
             const note = ''; // Replace with your transaction note
             const name = 'आपका नाम'; // Replace with your name
@@ -93,14 +93,4 @@
         }
 
         function downloadQR() {
-            const imgUrl = 'https://github.com/RAOSAHAB7/Bavandar/blob/main/path-to-your-upi-qr-code.png?raw=true'; // Replace with your image URL
-            const a = document.createElement('a');
-            a.href = imgUrl;
-            a.download = 'upi-qr-code.png'; // Specify filename here
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
-</body>
-</html>
+            const imgBase64 = 'data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QA6RXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQAAAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABPKADAAQAAAABAAABkAAAAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAoACgDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwQG/8QAIhEAAgICAwEBAAAAAAAAAAAAAAERAgMhMUEEQWETI//aAAwDAQACEQMRAD8AaSR90+kVqto0JyCP9oornOjCgA61wCqBqVDH61AKqZpmoxSgAooqtSjoiopNIMKaKMUqWiijSow2gFQ0rFGoU5YoFMc6CnUmlTmKUBQR1oKm8FVqsBqrVqLJ1QxaSjTUi8+NVqNB5xSZWiz60uqOgA60yKMVHQUoGn6USigVHSioA0zVI4tNGrUdqTJJQlFFKY6CmKMTSjNGkooy2gNFGoUrFiU
