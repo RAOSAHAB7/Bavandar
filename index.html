@@ -78,12 +78,23 @@
         /* Animated arrow styles */
         .down-arrow {
             position: absolute;
-            bottom: 20px;
+            top: calc(100% + 10px); /* Positioned just above the "Pay now" button */
             left: 50%;
             transform: translateX(-50%);
-            animation: bounce 1s infinite alternate; /* Animation properties */
             font-size: 2rem;
-            color: #4CAF50; /* Green color */
+        }
+
+        /* Arrow colors */
+        .arrow-green {
+            color: #4CAF50; /* Green arrow */
+        }
+
+        .arrow-blue {
+            color: #2196F3; /* Blue arrow */
+        }
+
+        .arrow-red {
+            color: #F44336; /* Red arrow */
         }
 
         /* Keyframes for bounce animation */
@@ -94,6 +105,19 @@
             to {
                 transform: translateX(-50%) translateY(10px);
             }
+        }
+
+        /* Animation classes */
+        .bounce-green {
+            animation: bounce 1s infinite alternate; /* Green arrow animation */
+        }
+
+        .bounce-blue {
+            animation: bounce 1s infinite alternate 0.3s; /* Blue arrow animation with delay */
+        }
+
+        .bounce-red {
+            animation: bounce 1s infinite alternate 0.6s; /* Red arrow animation with delay */
         }
     </style>
 </head>
@@ -107,8 +131,10 @@
         <div class="payment-instructions">
             <p>भुगतान करने के लिए "pay now" ग्रीन बटन पर क्लिक करें और फिर अपना पेमेंट एप्प चुनें, जैसे PhonePe, GPay, Paytm आदि।</p>
         </div>
-        <!-- Animated arrow indicating to "Pay now" -->
-        <div class="down-arrow">&#9660;</div>
+        <!-- Animated arrows indicating to "Pay now" -->
+        <div class="down-arrow arrow-green bounce-green">&#9660;</div>
+        <div class="down-arrow arrow-blue bounce-blue">&#9660;</div>
+        <div class="down-arrow arrow-red bounce-red">&#9660;</div>
     </div>
 
     <script>
