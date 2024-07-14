@@ -50,15 +50,14 @@
             cursor: pointer;
             font-size: 1.2rem;
             margin-top: 30px; /* Increased top margin */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-            box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3); /* Soft shadow */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #4CAF50; /* Outer and inner shadow */
         }
 
         /* Button hover effect */
         .btn-pay:hover {
-            background-color: #45a049; /* Darker green on hover */
             transform: translateY(-3px); /* Move up slightly on hover */
-            box-shadow: 0 12px 20px rgba(76, 175, 80, 0.5); /* Enhanced shadow on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5), inset 0 0 0 1px #45a049; /* Enhanced outer and inner shadow on hover */
         }
 
         /* QR code image styles */
