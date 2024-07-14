@@ -29,7 +29,6 @@
             border: 2px solid #fff; /* White border */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Soft white shadow */
-            position: relative; /* Relative positioning for arrows */
         }
 
         /* Header styles */
@@ -71,58 +70,16 @@
             box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Soft shadow */
         }
 
-        /* Animated arrow styles */
-        .down-arrow-container {
-            position: absolute;
-            top: calc(50% - 80px); /* Adjust top position */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%; /* Full width */
-            text-align: center;
+        /* Animated text at the bottom */
+        .bottom-text {
+            font-size: 1rem;
+            color: #FF4500; /* Orange color */
+            margin-top: 20px;
+            animation: color-change 5s infinite alternate, shake 0.5s infinite alternate;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
         }
 
-        .down-arrow {
-            font-size: 2rem;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        /* Arrow colors */
-        .arrow-green {
-            color: #4CAF50; /* Green arrow */
-        }
-
-        .arrow-blue {
-            color: #2196F3; /* Blue arrow */
-        }
-
-        .arrow-red {
-            color: #F44336; /* Red arrow */
-        }
-
-        /* Keyframes for bounce animation */
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(10px);
-            }
-        }
-
-        /* Animation classes */
-        .bounce-green {
-            animation: bounce 1s infinite alternate; /* Green arrow animation */
-        }
-
-        .bounce-blue {
-            animation: bounce 1s infinite alternate 0.3s; /* Blue arrow animation with delay */
-        }
-
-        .bounce-red {
-            animation: bounce 1s infinite alternate 0.6s; /* Red arrow animation with delay */
-        }
-
+        /* Keyframes for color change animation */
         @keyframes color-change {
             0% {
                 color: #4CAF50; /* Green */
@@ -141,6 +98,7 @@
             }
         }
 
+        /* Keyframes for shake animation */
         @keyframes shake {
             0% {
                 transform: translateX(0);
@@ -152,15 +110,6 @@
                 transform: translateX(0);
             }
         }
-
-        /* Animated text at the bottom */
-        .bottom-text {
-            font-size: 1rem;
-            color: #FF4500; /* Orange color */
-            margin-top: 20px;
-            animation: color-change 5s infinite alternate, shake 0.5s infinite alternate;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
-        }
     </style>
 </head>
 <body>
@@ -168,12 +117,6 @@
         <h1>Click on Pay NOW</h1>
         <img src="https://i.postimg.cc/Ghb5zjXj/path-to-your-upi-qr-code.jpg" alt="UPI QR Code" class="qr-code">
         <!-- Replace with your actual UPI QR code or remove if not needed -->
-        <div class="down-arrow-container">
-            <!-- Animated arrows indicating to "Pay now" -->
-            <div class="down-arrow arrow-green bounce-green">&#9660;</div>
-            <div class="down-arrow arrow-blue bounce-blue">&#9660;</div>
-            <div class="down-arrow arrow-red bounce-red">&#9660;</div>
-        </div>
         <button class="btn-pay" onclick="payNow()">Pay now</button>
         <div class="bottom-text">
             राम राम जी  Sairam जी को पेमेंट डालने के लिए (Pay Now) के बटन पर दबाएं।<br>
