@@ -28,6 +28,7 @@
             border: 1px solid #ccc; /* Light grey border */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            position: relative; /* Relative positioning for arrows */
         }
 
         /* Header styles */
@@ -73,6 +74,27 @@
             transform: rotate(-5deg); /* Rotate the QR code slightly */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
         }
+
+        /* Animated arrow styles */
+        .down-arrow {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 1s infinite alternate; /* Animation properties */
+            font-size: 2rem;
+            color: #4CAF50; /* Green color */
+        }
+
+        /* Keyframes for bounce animation */
+        @keyframes bounce {
+            from {
+                transform: translateX(-50%) translateY(0);
+            }
+            to {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,6 +107,8 @@
         <div class="payment-instructions">
             <p>भुगतान करने के लिए "pay now" ग्रीन बटन पर क्लिक करें और फिर अपना पेमेंट एप्प चुनें, जैसे PhonePe, GPay, Paytm आदि।</p>
         </div>
+        <!-- Animated arrow indicating to "Pay now" -->
+        <div class="down-arrow">&#9660;</div>
     </div>
 
     <script>
