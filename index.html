@@ -10,11 +10,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/nr1HWbCk/Picsart-24-07-15-03-15-55-670.jpg') center center/cover no-repeat; /* Gradient overlay and background image */
+            background: url('https://i.postimg.cc/nr1HWbCk/Picsart-24-07-15-03-15-55-670.jpg') center center/cover no-repeat fixed; /* Background image */
             color: #333; /* Dark grey text color */
             scroll-behavior: smooth; /* Smooth scrolling behavior */
+            margin: 0; /* Remove default margin */
             height: 100vh; /* Full viewport height */
-            margin: 0; /* Remove default margins */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,6 +28,8 @@
             border: 1px solid #ccc; /* Light grey border */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            position: relative; /* Relative positioning for stickers */
+            overflow: hidden; /* Hide overflowing stickers */
         }
 
         /* Header styles */
@@ -64,18 +66,38 @@
             margin-top: 20px;
             font-size: 1.1rem;
         }
+
+        /* QR code image styles */
+        .qr-code {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            transform: rotate(-5deg); /* Rotate the QR code slightly */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
+        }
+
+        /* Sticker styles */
+        .sticker {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            transform: rotate(-20deg);
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Click on Pay NOW</h1>
+        <img src="https://i.postimg.cc/Ghb5zjXj/path-to-your-upi-qr-code.jpg" alt="UPI QR Code" class="qr-code">
         <!-- Replace with your actual UPI QR code or remove if not needed -->
-        <img src="https://i.postimg.cc/Ghb5zjXj/path-to-your-upi-qr-code.jpg" alt="UPI QR Code" style="max-width: 100%; height: auto; margin-bottom: 20px;">
         <p>अपना भुगतान करने के लिए पेमेंट ऐप्प चुनें:</p>
         <button class="btn-pay" onclick="payNow()">Pay now</button>
         <div class="payment-instructions">
             <p>भुगतान करने के लिए "pay now" ग्रीन बटन पर क्लिक करें और फिर अपना पेमेंट एप्प चुनें, जैसे PhonePe, GPay, Paytm आदि।</p>
         </div>
+        <!-- Sticker image (example) -->
+        <img src="https://via.placeholder.com/150" alt="Sticker" class="sticker">
     </div>
 
     <script>
