@@ -11,7 +11,7 @@
             text-align: center;
             padding: 20px;
             background: url('https://i.postimg.cc/nr1HWbCk/Picsart-24-07-15-03-15-55-670.jpg') center center/cover no-repeat fixed; /* Background image */
-            color: #333; /* Dark grey text color */
+            color: #fff; /* White text color */
             scroll-behavior: smooth; /* Smooth scrolling behavior */
             margin: 0; /* Remove default margin */
             height: 100vh; /* Full viewport height */
@@ -24,12 +24,11 @@
         /* Container styles */
         .container {
             max-width: 400px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
             padding: 30px;
-            border: 1px solid #ccc; /* Light grey border */
+            border: 2px solid #fff; /* White border */
             border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
-            position: relative; /* Relative positioning for arrows */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Soft white shadow */
         }
 
         /* Header styles */
@@ -37,7 +36,7 @@
             font-size: 3rem;
             margin-bottom: 20px;
             color: #4CAF50; /* Green header color */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth effect */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
             animation: color-change 10s infinite alternate; /* Color animation */
         }
 
@@ -51,29 +50,32 @@
             cursor: pointer;
             font-size: 1.2rem;
             margin-top: 30px; /* Increased top margin */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-            box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3); /* Soft shadow */
-            animation: shake 0.5s infinite alternate; /* Shake animation */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #4CAF50; /* Outer and inner shadow */
         }
 
         /* Button hover effect */
         .btn-pay:hover {
-            background-color: #45a049; /* Darker green on hover */
             transform: translateY(-3px); /* Move up slightly on hover */
-            box-shadow: 0 12px 20px rgba(76, 175, 80, 0.5); /* Enhanced shadow on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5), inset 0 0 0 1px #45a049; /* Enhanced outer and inner shadow on hover */
         }
 
-        /* Keyframes for shake animation */
-        @keyframes shake {
-            0% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(5px);
-            }
-            100% {
-                transform: translateX(0);
-            }
+        /* QR code image styles */
+        .qr-code {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            filter: hue-rotate(180deg); /* Rotate colors */
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Soft shadow */
+        }
+
+        /* Animated text at the bottom */
+        .bottom-text {
+            font-size: 1rem;
+            color: #FF4500; /* Orange color */
+            margin-top: 20px;
+            animation: color-change 5s infinite alternate, shake 0.5s infinite alternate;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
         }
 
         /* Keyframes for color change animation */
@@ -95,85 +97,7 @@
             }
         }
 
-        /* QR code image styles */
-        .qr-code {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-            transform: rotate(-5deg); /* Rotate the QR code slightly */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
-        }
-
-        /* Animated arrow styles */
-        .down-arrow-container {
-            position: absolute;
-            top: 50%; /* Adjust top position */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%; /* Full width */
-            text-align: center;
-        }
-
-        .down-arrow {
-            font-size: 2rem;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        /* Arrow colors */
-        .arrow-green {
-            color: #4CAF50; /* Green arrow */
-        }
-
-        .arrow-blue {
-            color: #2196F3; /* Blue arrow */
-        }
-
-        .arrow-red {
-            color: #F44336; /* Red arrow */
-        }
-
-        /* Keyframes for bounce animation */
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(10px);
-            }
-        }
-
-        /* Animation classes */
-        .bounce-green {
-            animation: bounce 1s infinite alternate; /* Green arrow animation */
-        }
-
-        .bounce-blue {
-            animation: bounce 1s infinite alternate 0.3s; /* Blue arrow animation with delay */
-        }
-
-        .bounce-red {
-            animation: bounce 1s infinite alternate 0.6s; /* Red arrow animation with delay */
-        }
-
-        @keyframes color-change {
-            0% {
-                color: #4CAF50; /* Green */
-            }
-            25% {
-                color: #FFC107; /* Yellow */
-            }
-            50% {
-                color: #2196F3; /* Blue */
-            }
-            75% {
-                color: #E91E63; /* Pink */
-            }
-            100% {
-                color: #4CAF50; /* Green */
-            }
-        }
-
+        /* Keyframes for shake animation */
         @keyframes shake {
             0% {
                 transform: translateX(0);
@@ -185,15 +109,6 @@
                 transform: translateX(0);
             }
         }
-
-        /* Animated text at the bottom */
-        .bottom-text {
-            font-size: 1rem;
-            color: #FF4500; /* Orange color */
-            margin-top: 20px;
-            animation: color-change 5s infinite alternate, shake 0.5s infinite alternate;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth effect */
-        }
     </style>
 </head>
 <body>
@@ -202,12 +117,6 @@
         <img src="https://i.postimg.cc/Ghb5zjXj/path-to-your-upi-qr-code.jpg" alt="UPI QR Code" class="qr-code">
         <!-- Replace with your actual UPI QR code or remove if not needed -->
         <button class="btn-pay" onclick="payNow()">Pay now</button>
-        <div class="down-arrow-container">
-            <!-- Animated arrows indicating to "Pay now" -->
-            <div class="down-arrow arrow-green bounce-green">&#9660;</div>
-            <div class="down-arrow arrow-blue bounce-blue">&#9660;</div>
-            <div class="down-arrow arrow-red bounce-red">&#9660;</div>
-        </div>
         <div class="bottom-text">
             राम राम जी  Sairam जी को पेमेंट डालने के लिए (Pay Now) के बटन पर दबाएं।<br>
             उसके बाद अपना app phonepay Paytm mobikwik slice Amazon pay etc. में से एक चुने और पेमेंट app पर दबाए once.<br>
@@ -226,4 +135,8 @@
             const paymentUrl = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(name)}&am=${encodeURIComponent(amount)}&tn=${encodeURIComponent(note)}&cu=${encodeURIComponent(currency)}`;
 
             // Redirect to UPI payment app
-            window.location.href
+            window.location.href = paymentUrl;
+        }
+    </script>
+</body>
+</html>
