@@ -11,7 +11,7 @@
             text-align: center;
             padding: 20px;
             background: url('https://i.postimg.cc/nr1HWbCk/Picsart-24-07-15-03-15-55-670.jpg') center center/cover no-repeat fixed; /* Background image */
-            color: #333; /* Dark grey text color */
+            color: #fff; /* White text color */
             scroll-behavior: smooth; /* Smooth scrolling behavior */
             margin: 0; /* Remove default margin */
             height: 100vh; /* Full viewport height */
@@ -24,11 +24,11 @@
         /* Container styles */
         .container {
             max-width: 400px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
             padding: 30px;
-            border: 1px solid #ccc; /* Light grey border */
+            border: 2px solid #fff; /* White border */
             border-radius: 20px; /* Rounded corners */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Soft white shadow */
             position: relative; /* Relative positioning for arrows */
         }
 
@@ -37,7 +37,7 @@
             font-size: 3rem;
             margin-bottom: 20px;
             color: #4CAF50; /* Green header color */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth effect */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
             animation: color-change 10s infinite alternate; /* Color animation */
         }
 
@@ -67,14 +67,14 @@
             max-width: 100%;
             height: auto;
             margin-bottom: 20px;
-            transform: rotate(-5deg); /* Rotate the QR code slightly */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            filter: hue-rotate(180deg); /* Rotate colors */
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Soft shadow */
         }
 
         /* Animated arrow styles */
         .down-arrow-container {
             position: absolute;
-            top: 50%; /* Adjust top position */
+            top: 80%; /* Adjust top position */
             left: 50%;
             transform: translateX(-50%);
             width: 100%; /* Full width */
@@ -159,7 +159,7 @@
             color: #FF4500; /* Orange color */
             margin-top: 20px;
             animation: color-change 5s infinite alternate, shake 0.5s infinite alternate;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth effect */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth effect */
         }
     </style>
 </head>
