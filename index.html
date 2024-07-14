@@ -76,12 +76,19 @@
         }
 
         /* Animated arrow styles */
-        .down-arrow {
+        .down-arrow-container {
             position: absolute;
-            top: calc(-60px); /* Positioned above the "Pay now" button */
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
+            width: 100%; /* Full width */
+            text-align: center;
+        }
+
+        .down-arrow {
             font-size: 2rem;
+            display: inline-block;
+            margin-bottom: 10px;
         }
 
         /* Arrow colors */
@@ -100,10 +107,10 @@
         /* Keyframes for bounce animation */
         @keyframes bounce {
             from {
-                transform: translateX(-50%) translateY(0);
+                transform: translateY(0);
             }
             to {
-                transform: translateX(-50%) translateY(10px);
+                transform: translateY(10px);
             }
         }
 
@@ -127,14 +134,16 @@
         <img src="https://i.postimg.cc/Ghb5zjXj/path-to-your-upi-qr-code.jpg" alt="UPI QR Code" class="qr-code">
         <!-- Replace with your actual UPI QR code or remove if not needed -->
         <p>अपना भुगतान करने के लिए पेमेंट ऐप्प चुनें:</p>
+        <div class="down-arrow-container">
+            <!-- Animated arrows indicating to "Pay now" -->
+            <div class="down-arrow arrow-green bounce-green">&#9660;</div>
+            <div class="down-arrow arrow-blue bounce-blue">&#9660;</div>
+            <div class="down-arrow arrow-red bounce-red">&#9660;</div>
+        </div>
         <button class="btn-pay" onclick="payNow()">Pay now</button>
         <div class="payment-instructions">
             <p>भुगतान करने के लिए "pay now" ग्रीन बटन पर क्लिक करें और फिर अपना पेमेंट एप्प चुनें, जैसे PhonePe, GPay, Paytm आदि।</p>
         </div>
-        <!-- Animated arrows indicating to "Pay now" -->
-        <div class="down-arrow arrow-green bounce-green">&#9660;</div>
-        <div class="down-arrow arrow-blue bounce-blue">&#9660;</div>
-        <div class="down-arrow arrow-red bounce-red">&#9660;</div>
     </div>
 
     <script>
