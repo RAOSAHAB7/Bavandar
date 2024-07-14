@@ -28,8 +28,6 @@
             border: 1px solid #ccc; /* Light grey border */
             border-radius: 20px; /* Rounded corners */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
-            position: relative; /* Relative positioning for stickers */
-            overflow: hidden; /* Hide overflowing stickers */
         }
 
         /* Header styles */
@@ -75,15 +73,6 @@
             transform: rotate(-5deg); /* Rotate the QR code slightly */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
         }
-
-        /* Sticker styles */
-        .sticker {
-            position: absolute;
-            top: 10%;
-            left: 5%;
-            transform: rotate(-20deg);
-            opacity: 0.7;
-        }
     </style>
 </head>
 <body>
@@ -96,8 +85,6 @@
         <div class="payment-instructions">
             <p>भुगतान करने के लिए "pay now" ग्रीन बटन पर क्लिक करें और फिर अपना पेमेंट एप्प चुनें, जैसे PhonePe, GPay, Paytm आदि।</p>
         </div>
-        <!-- Sticker image (example) -->
-        <img src="https://via.placeholder.com/150" alt="Sticker" class="sticker">
     </div>
 
     <script>
